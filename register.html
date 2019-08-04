@@ -1,6 +1,39 @@
 ---
 layout: main
-icon: fa-address-card
 title: Register
 permalink: /register/
 ---
+
+<div>
+        <form action="#">
+                <fieldset>
+                    <legend>Register</legend>
+        
+                    <label for="username">Username</label>
+                    <p class="field-icon">
+                        <input type="text" id="username" placeholder="Username">
+                        <label for="username"><i class="fas fa-user"></i></label>
+                    </p>
+                    <label for="email">Email</label>
+                    <p class="field-icon">
+                        <input type="text" id="email" placeholder="email">
+                        <label for="username"><i class="fas fa-envelope"></i></label>
+                    </p>
+                    <label for="password">Password</label>
+                    <p class="field-icon">
+                        <input type="password" id="password" placeholder="Password" >
+                        <label for="password"><i class="fas fa-key"></i></label>
+                    </p>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <p class="field-icon">
+                        <input type="password" id="confirmPassword" placeholder="******" >
+                        <label for="password"><i class="fas fa-key"></i></label>
+                    </p>
+                    <p>
+                    <input type="submit" value="Register">
+                    </p>
+                </fieldset>
+            
+                <p class="text-center">Have an account? <a href="/login">Log In</a> </p>
+        </form>
+    </div>

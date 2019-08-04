@@ -1,0 +1,70 @@
+.contact {
+    padding: 0;
+    margin: 0.5em auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+    color: var(--color-border);
+
+
+    h2,h3 {
+        text-align: center;
+        padding-top: 1em;
+    }
+    
+    h2,
+    .section-map {
+        grid-column: span 12;
+    }
+
+    .section-info,
+    .section-message {
+        grid-column: span 6;
+        border: 2px solid var(--color-link);
+    }
+
+    .section-info {
+        
+        p {
+            padding: 0.5em 1em;
+        }
+    }
+
+    .section-message {
+
+        form {
+            display: grid;
+            grid-column: span 6;
+            margin: 1em 2em;
+
+            input, output, textarea, select {
+                border:none;
+                border: 1px solid var(--color-link)
+            }
+
+            p {
+                padding-bottom: 0.5em;
+            }
+
+            input,textarea {
+                width: 100%;
+            }
+
+            input[type="submit"] {
+                padding: 0;
+                // margin: 0 1em;
+            }
+
+            label {
+                padding: 0;
+            }
+        }
+
+        
+    }
+
+    .section-map iframe {
+        border: 2px solid var(--color-border);
+    }
+}
