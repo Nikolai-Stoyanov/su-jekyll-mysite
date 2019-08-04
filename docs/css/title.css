@@ -1,0 +1,10 @@
+.site-title {
+  border: 2px solid var(--color-link);
+  border-radius: 40%;
+  background: var(--bgrd-link); }
+  .site-title a {
+    color: var(--color-link); }
+  .site-title i {
+    font-size: 0.7em; }
+  .site-title span {
+    padding: 0.2em; }

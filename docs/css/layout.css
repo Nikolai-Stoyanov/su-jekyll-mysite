@@ -1,0 +1,13 @@
+.site {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 2em; }
+  .site .site-header {
+    display: flex;
+    align-items: center; }
+    .site .site-header .site-title {
+      padding: 0.2em;
+      margin: 0;
+      font-size: 2em; }
+    .site .site-header nav {
+      margin-left: auto; }

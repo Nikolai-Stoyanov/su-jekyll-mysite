@@ -1,0 +1,18 @@
+.site-title {
+
+    border: 2px solid var(--color-link);
+    border-radius: 40%;
+    background: var(--bgrd-link);
+
+    a {
+        color: var(--color-link);
+    }
+    
+    i {
+        font-size: 0.7em;
+    }
+
+    span {
+        padding: 0.2em;
+    }
+}

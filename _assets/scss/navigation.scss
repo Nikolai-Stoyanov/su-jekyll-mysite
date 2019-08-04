@@ -1,0 +1,94 @@
+.site-nav {
+
+    & > ul {
+        display: flex;
+        padding: 0;
+
+        ul {
+            display: block;
+            pointer-events: none;
+            padding: 0.2em;
+            position: absolute;
+            top: 100%; left: 0;
+
+            li {
+                opacity: 0;
+                transform: translate(-1em, -0.5em);
+                transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+                @for $i from 1 through 6 {
+                    &:nth-child(#{$i}) { 
+                        transition-delay: 0.1s * $i;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    li {
+        display: block;
+        list-style: none outside;
+        padding: 0 0.2em;
+        position: relative;
+
+        // i {
+        //     display: none;
+        // }
+
+        li {
+            padding: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 0.5em;
+            }
+        }
+
+        &:hover {
+            // i {
+            //     display: block;
+            // }
+            // span {
+            //     display: none;
+            // }
+            ul {
+                pointer-events: all;
+            }
+
+            li {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    & > li:first-child {
+        padding-left: 0;
+    }
+
+    a {
+        display: block;
+        padding: 0.5em 1em;
+        border-radius: 0.3em;
+        // background: var(--bgrd-link);
+        color: var(--color-link);
+    }
+
+    li:hover > a,
+    li.selected > a,
+    a:hover {
+    background: var(--color-link);
+    color: var(--bgrd-link);
+    }
+}
+
+.site-nav a i.fas:before {
+    color:var(--color-link);
+    margin-right: 0.2em;
+}
+
+.site-nav li:hover > a i.fas:before,
+.site-nav li.selected > a i.fas:before,
+.site-nav a:hover i.fas:before {
+    color: var(--bgrd-link);
+}
