@@ -8,3 +8,29 @@
   padding: 10em;
   margin: 0.5em auto;
   text-align: center; }
+
+.main-requirements {
+  background: var(--bgrd-link); }
+  .main-requirements h2 {
+    text-align: center; }
+    .main-requirements h2::after {
+      display: block;
+      content: '';
+      background: var(--color-border);
+      height: 2px;
+      width: 25%;
+      margin: 0 auto; }
+  .main-requirements .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 0.5em; }
+    .main-requirements .content section {
+      flex: 0 0 23%;
+      border: 2px solid var(--color-link);
+      padding: 0.5em; }
+      .main-requirements .content section h4 {
+        text-align: center;
+        padding-bottom: 1em; }
+      .main-requirements .content section p {
+        padding: 0.5em; }

@@ -1,29 +1,25 @@
 .section-about {
     text-align: center;
-
-    h2 {
-        color: var(--color-link);
-    }
     
-    .wrapper{
+    .wrapper {
         width: 100%;
-        height: 80vh;
-        padding: 2em;
-        text-align: left;
-        border-radius: 2em;
+        height: 100vh;
+        padding: 2em 6em;
+        margin-top: 2em;
+        border-radius: 40%;
         overflow: hidden;    
         background: var(--bgrd-link);
         color: var(--color-link);
         transition: all 2s ease-in-out;
 
-        &:hover{
+        &:hover {
             transition-delay: 0.4s;
             background: var(--color-link);
             color: var(--bgrd-link);    
         }
     }
     
-    span{
+    span {
       font-weight: bold;
     }    
 }
