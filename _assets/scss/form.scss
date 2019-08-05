@@ -8,6 +8,7 @@ form fieldset {
     border: 2px solid var(--color-border);
     background: var(--bgrd-link);
     border-radius: 4px;
+    margin-bottom: 1em;
 }
 
 form fieldset p {
@@ -88,3 +89,7 @@ form .field-icon input:hover{
     border-color: var(--color-link);
 }
 
+form a {
+    color: var(--color-link);
+    padding-left: 1em;
+}

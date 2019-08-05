@@ -1,0 +1,31 @@
+.section-about {
+    text-align: center;
+
+    h2 {
+        color: var(--color-link);
+    }
+    
+    .wrapper{
+        width: 100%;
+        height: 80vh;
+        padding: 2em;
+        text-align: left;
+        border-radius: 2em;
+        overflow: hidden;    
+        background: var(--bgrd-link);
+        color: var(--color-link);
+        transition: all 2s ease-in-out;
+
+        &:hover{
+            transition-delay: 0.4s;
+            background: var(--color-link);
+            color: var(--bgrd-link);    
+        }
+    }
+    
+    span{
+      font-weight: bold;
+    }    
+}
+
+
