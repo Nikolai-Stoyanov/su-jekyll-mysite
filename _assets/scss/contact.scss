@@ -22,12 +22,17 @@
     .section-message {
         grid-column: span 6;
         border: 2px solid var(--color-link);
-        border-radius: 10%;
+        border-radius: 30px;
         padding: 3em;
     }
 
     .section-info {
-        
+
+        & > p:nth-child(2){
+            text-align: center;
+            padding-bottom: 2em;
+        }
+
         p {
             padding: 0.5em 1em;
         }
@@ -41,8 +46,10 @@
             margin: 1em 2em;
 
             input, output, textarea, select {
+                outline: none;
                 border:none;
-                border: 1px solid var(--color-link)
+                border: 1px solid var(--color-link);
+                border-radius: 15px;
             }
 
             p {

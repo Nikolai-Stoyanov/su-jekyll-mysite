@@ -1,4 +1,5 @@
 @import 'https://use.fontawesome.com/releases/v5.8.2/css/all.css';
+@import url("https://fonts.googleapis.com/css?family=Courgette&display=swap");
 :root {
   --main-width: 90em;
   --color-body-text: #000;
@@ -124,6 +125,7 @@ a {
       padding-left: 2em; }
 
 .site-title {
+  font-family: 'Courgette', cursive;
   border: 2px solid var(--color-link);
   border-radius: 40%;
   background: var(--bgrd-link); }
@@ -216,11 +218,24 @@ a {
   padding: 10em;
   margin: 0.5em auto;
   text-align: center; }
+  .main-picture button {
+    padding: 2em auto;
+    outline: none;
+    border: 1px solid var(--color-border);
+    background: var(--color-link);
+    color: var(--bgrd-link);
+    padding: 0.5em; }
+    .main-picture button:hover {
+      background: var(--bgrd-link);
+      color: var(--color-link);
+      border-color: var(--color-link);
+      cursor: pointer; }
 
 .main-welcome {
   background: var(--color-link);
   margin-bottom: 0.5em; }
   .main-welcome header {
+    padding-top: 0.5em;
     text-align: center; }
     .main-welcome header p {
       padding-bottom: 1em; }
@@ -244,12 +259,16 @@ a {
       padding: 0.5em; }
       .main-welcome .section-content section h4 {
         text-align: center;
-        padding-bottom: 1em; }
+        padding: 2em auto;
+        margin: 0;
+        margin-top: 2em; }
       .main-welcome .section-content section p {
         padding: 0.5em; }
       .main-welcome .section-content section span {
         display: block;
-        position: relative; }
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden; }
         .main-welcome .section-content section span:before {
           display: block;
           content: '';
@@ -267,14 +286,16 @@ a {
   background: var(--bgrd-link);
   margin-bottom: 0.5em; }
   .main-requirements h2 {
-    text-align: center; }
+    text-align: center;
+    padding-top: 0.5em; }
     .main-requirements h2::after {
       display: block;
       content: '';
       background: var(--color-border);
       height: 2px;
       width: 25%;
-      margin: 0 auto; }
+      margin: 1em auto;
+      margin-bottom: 2em; }
   .main-requirements .section-content {
     display: flex;
     flex-wrap: wrap;
@@ -334,7 +355,7 @@ form fieldset {
   display: block;
   border: 2px solid var(--color-border);
   background: var(--bgrd-link);
-  border-radius: 4px;
+  border-radius: 15px;
   margin-bottom: 1em; }
 
 form fieldset p {
@@ -343,9 +364,9 @@ form fieldset p {
 form legend {
   display: inline-block;
   padding: 0.5rem 5rem 0.5rem 0.5rem;
-  margin-left: -0.1rem;
+  margin-left: -0.5rem;
   border: 2px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 15px;
   background: var(--bgrd-link); }
 
 form label {
@@ -355,26 +376,31 @@ form label {
 
 form input[type="password"],
 form input[type="text"] {
+  outline: none;
   display: block;
   width: 90%;
   padding: 0.5rem 1rem;
   border: 2px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 15px;
   border-left: none;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px; }
 
 form input[type="submit"] {
+  outline: none;
+  border: 2px solid var(--color-border);
   display: block;
   width: 100%;
   padding: 0.5em 1em;
   margin: 0;
-  color: var(--color-link);
-  background: var(--bgrd-link); }
+  margin-top: 2em;
+  background: var(--bgrd-link);
+  border-radius: 15px; }
 
 form input[type="submit"]:hover {
   color: var(--bgrd-link);
-  background: var(--color-link); }
+  background: var(--color-link);
+  border-color: var(--color-link); }
 
 .field-icon {
   display: flex; }
@@ -391,7 +417,7 @@ form .field-icon label {
   align-items: center;
   justify-content: center;
   border: 2px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 15px;
   background: #fff;
   border-right: none;
   border-top-right-radius: 0px;
@@ -429,8 +455,11 @@ form a {
   .contact .section-message {
     grid-column: span 6;
     border: 2px solid var(--color-link);
-    border-radius: 10%;
+    border-radius: 30px;
     padding: 3em; }
+  .contact .section-info > p:nth-child(2) {
+    text-align: center;
+    padding-bottom: 2em; }
   .contact .section-info p {
     padding: 0.5em 1em; }
   .contact .section-message form {
@@ -438,8 +467,10 @@ form a {
     grid-column: span 6;
     margin: 1em 2em; }
     .contact .section-message form input, .contact .section-message form output, .contact .section-message form textarea, .contact .section-message form select {
+      outline: none;
       border: none;
-      border: 1px solid var(--color-link); }
+      border: 1px solid var(--color-link);
+      border-radius: 15px; }
     .contact .section-message form p {
       padding-bottom: 0.5em; }
     .contact .section-message form input, .contact .section-message form textarea {

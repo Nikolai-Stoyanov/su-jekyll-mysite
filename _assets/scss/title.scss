@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
 .site-title {
 
+    font-family: 'Courgette', cursive;
     border: 2px solid var(--color-link);
     border-radius: 40%;
     background: var(--bgrd-link);
@@ -17,7 +20,6 @@
     }
 
     &:hover {
-        // border: 2px solid var(--bgrd-border);
         background: var(--color-link);
 
         a {
