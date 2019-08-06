@@ -99,6 +99,29 @@ a {
       font-size: 2em; }
     .site .site-header nav {
       margin-left: auto; }
+  .site .site-footer {
+    padding: 0;
+    margin-top: 2em;
+    display: flex;
+    text-align: center; }
+    .site .site-footer ul {
+      display: flex;
+      margin-left: auto;
+      padding: 0.5em 2em 0.5em 0; }
+    .site .site-footer li {
+      list-style: none outside;
+      display: flex;
+      padding-right: 1em; }
+      .site .site-footer li:last-child {
+        padding-right: 0; }
+    .site .site-footer a {
+      color: var(--color-link);
+      font-size: 1.5em; }
+      .site .site-footer a:hover {
+        color: var(--bgrd-link); }
+    .site .site-footer p {
+      padding: 1em 0;
+      padding-left: 2em; }
 
 .site-title {
   border: 2px solid var(--color-link);

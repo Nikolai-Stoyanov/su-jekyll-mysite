@@ -20,5 +20,53 @@
         }
     }
 
+    .site-footer {
+        padding: 0;
+        margin-top: 2em;
+        // background: var(--bgrd-link);
+        display: flex;
+        text-align: center;
+
+        ul {
+            display: flex;
+            margin-left: auto;
+            padding: 0.5em 2em 0.5em 0;
+            // padding-right: 2em;
+            // padding-bottom: 0;
+        }
+
+        li {
+            list-style: none outside;
+            display: flex;
+            padding-right: 1em;
+
+            &:last-child {
+                padding-right:0;
+            }
+        }
+
+        a {
+            color: var(--color-link);
+            // background: var(--bgrd-link);
+            font-size: 1.5em;
+
+            &:hover {
+                color: var(--bgrd-link);
+                // background: var(--color-link);
+            }
+        }
+
+
+
+
+
+        
+
+        p {
+            padding: 1em 0;
+            padding-left: 2em;
+        }
+    }
+
    
 }
