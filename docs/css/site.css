@@ -110,6 +110,10 @@ a {
     font-size: 0.7em; }
   .site-title span {
     padding: 0.2em; }
+  .site-title:hover {
+    background: var(--color-link); }
+    .site-title:hover a {
+      color: var(--bgrd-link); }
 
 .site-nav > ul {
   display: flex;
@@ -137,6 +141,8 @@ a {
         transition-delay: 0.5s; }
       .site-nav > ul ul li:nth-child(6) {
         transition-delay: 0.6s; }
+      .site-nav > ul ul li:nth-child(7) {
+        transition-delay: 0.7s; }
 
 .site-nav li {
   display: block;
@@ -188,8 +194,55 @@ a {
   margin: 0.5em auto;
   text-align: center; }
 
+.main-welcome {
+  background: var(--color-link);
+  margin-bottom: 0.5em; }
+  .main-welcome header {
+    text-align: center; }
+    .main-welcome header p {
+      padding-bottom: 1em; }
+    .main-welcome header::after {
+      display: block;
+      content: '';
+      background: var(--color-border);
+      height: 2px;
+      width: 25%;
+      margin: 0 auto;
+      margin-bottom: 2em; }
+  .main-welcome .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 0.5em; }
+    .main-welcome .section-content section {
+      flex: 0 0 31%;
+      border: 2px solid var(--color-border);
+      border-radius: 10px;
+      padding: 0.5em; }
+      .main-welcome .section-content section h4 {
+        text-align: center;
+        padding-bottom: 1em; }
+      .main-welcome .section-content section p {
+        padding: 0.5em; }
+      .main-welcome .section-content section span {
+        display: block;
+        position: relative; }
+        .main-welcome .section-content section span:before {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+        .main-welcome .section-content section span img {
+          display: block;
+          width: 100%;
+          height: auto; }
+
 .main-requirements {
-  background: var(--bgrd-link); }
+  background: var(--bgrd-link);
+  margin-bottom: 0.5em; }
   .main-requirements h2 {
     text-align: center; }
     .main-requirements h2::after {
@@ -199,20 +252,56 @@ a {
       height: 2px;
       width: 25%;
       margin: 0 auto; }
-  .main-requirements .content {
+  .main-requirements .section-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 0.5em; }
-    .main-requirements .content section {
+    .main-requirements .section-content section {
       flex: 0 0 23%;
       border: 2px solid var(--color-link);
+      border-radius: 10px;
       padding: 0.5em; }
-      .main-requirements .content section h4 {
+      .main-requirements .section-content section h4 {
         text-align: center;
         padding-bottom: 1em; }
-      .main-requirements .content section p {
+      .main-requirements .section-content section p {
         padding: 0.5em; }
+
+.main-camera {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--color-link);
+  border-radius: 10px; }
+  .main-camera .picture {
+    flex: 0 0 30%;
+    padding: 1em; }
+    .main-camera .picture span {
+      width: 100%;
+      display: block;
+      position: relative;
+      background: var(--bgrd-link);
+      border-radius: 40%;
+      overflow: hidden; }
+      .main-camera .picture span:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+      .main-camera .picture span img {
+        display: block;
+        width: 100%;
+        height: auto; }
+  .main-camera .content {
+    padding: 2em 1em; }
+    .main-camera .content h2 {
+      text-align: center; }
+    .main-camera .content p {
+      padding: 0;
+      padding-bottom: 0.5em; }
 
 form {
   max-width: 30rem;

@@ -15,4 +15,13 @@
     span {
         padding: 0.2em;
     }
+
+    &:hover {
+        // border: 2px solid var(--bgrd-border);
+        background: var(--color-link);
+
+        a {
+            color: var(--bgrd-link);
+        }
+    }
 }

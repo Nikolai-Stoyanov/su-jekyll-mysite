@@ -24,6 +24,8 @@
         transition-delay: 0.5s; }
       .site-nav > ul ul li:nth-child(6) {
         transition-delay: 0.6s; }
+      .site-nav > ul ul li:nth-child(7) {
+        transition-delay: 0.7s; }
 
 .site-nav li {
   display: block;

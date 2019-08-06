@@ -64,8 +64,6 @@ navigation:
         text: DOG TRAINING
       - url: /services/
         text: PET STORE
-      - url: /services/
-        text: DOG TRAINING
   - url: /about/
     text: ABOUT
     icon: fa-user

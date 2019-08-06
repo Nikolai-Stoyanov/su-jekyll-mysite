@@ -8,3 +8,7 @@
     font-size: 0.7em; }
   .site-title span {
     padding: 0.2em; }
+  .site-title:hover {
+    background: var(--color-link); }
+    .site-title:hover a {
+      color: var(--bgrd-link); }
