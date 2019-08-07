@@ -10,6 +10,7 @@
             padding: 0.2em;
             position: absolute;
             top: 100%; left: 0;
+            
 
             li {
                 opacity: 0;
@@ -32,10 +33,6 @@
         padding: 0 0.2em;
         position: relative;
 
-        // i {
-        //     display: none;
-        // }
-
         li {
             padding: 0;
 
@@ -45,14 +42,12 @@
         }
 
         &:hover {
-            // i {
-            //     display: block;
-            // }
-            // span {
-            //     display: none;
-            // }
+ 
             ul {
                 pointer-events: all;
+                background: var(--bgrd-link);
+                opacity: 0.9;
+                border-radius: 0.3em;
             }
 
             li {
@@ -70,7 +65,6 @@
         display: block;
         padding: 0.5em 1em;
         border-radius: 0.3em;
-        // background: var(--bgrd-link);
         color: var(--color-link);
     }
 
@@ -83,7 +77,7 @@
 }
 
 .site-nav a i.fas:before {
-    color:var(--color-link);
+    color:var(--bg-link);
     margin-right: 0.2em;
 }
 

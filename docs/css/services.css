@@ -1,0 +1,52 @@
+.services {
+  background: var(--bgrd-link);
+  margin-top: 1em; }
+  .services h2, .services h6 {
+    text-align: center; }
+  .services h4 {
+    padding: 1em 0 0 1em; }
+  .services .services-content > section {
+    background: var(--color-link);
+    margin: 0.3em; }
+  .services .services-content .wrapper {
+    display: flex; }
+    .services .services-content .wrapper .picture {
+      display: block;
+      flex: 0 0 25%;
+      padding: 0.5em;
+      margin-bottom: 1em; }
+    .services .services-content .wrapper span {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 1em;
+      position: relative;
+      overflow: hidden; }
+      .services .services-content .wrapper span:before {
+        display: block;
+        content: '';
+        padding-top: 100%; }
+      .services .services-content .wrapper span img {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      .services .services-content .wrapper span .landscape {
+        width: auto;
+        height: 100%; }
+    .services .services-content .wrapper .content {
+      display: flex;
+      padding: 1em; }
+      .services .services-content .wrapper .content section:nth-child(1) {
+        padding-right: 1em; }
+    .services .services-content .wrapper .small {
+      display: flex;
+      flex: 0 0 75%;
+      justify-content: center;
+      align-items: center; }
+      .services .services-content .wrapper .small h6 {
+        padding-bottom: 1em; }

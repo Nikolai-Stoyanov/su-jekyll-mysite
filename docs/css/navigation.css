@@ -37,7 +37,10 @@
     .site-nav li li:not(:last-child) {
       margin-bottom: 0.5em; }
   .site-nav li:hover ul {
-    pointer-events: all; }
+    pointer-events: all;
+    background: var(--bgrd-link);
+    opacity: 0.9;
+    border-radius: 0.3em; }
   .site-nav li:hover li {
     opacity: 1;
     transform: translateY(0); }
@@ -58,7 +61,7 @@
   color: var(--bgrd-link); }
 
 .site-nav a i.fas:before {
-  color: var(--color-link);
+  color: var(--bg-link);
   margin-right: 0.2em; }
 
 .site-nav li:hover > a i.fas:before,
