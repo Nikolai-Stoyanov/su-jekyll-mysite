@@ -10,14 +10,17 @@
             padding: 0.2em;
             position: absolute;
             top: 100%; left: 0;
+            background: var(--bgrd-link);
+            opacity: 0;
+            transform: translate(-1em, -0.5em);
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
             
-
             li {
                 opacity: 0;
                 transform: translate(-1em, -0.5em);
                 transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 
-                @for $i from 1 through 7 {
+                @for $i from 1 through 5 {
                     &:nth-child(#{$i}) { 
                         transition-delay: 0.1s * $i;
                     }
@@ -25,7 +28,6 @@
             }
         }
     }
-
     
     li {
         display: block;
@@ -48,11 +50,12 @@
                 background: var(--bgrd-link);
                 opacity: 0.9;
                 border-radius: 0.3em;
+                transform: translate(0, 0);
             }
 
             li {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translate(0, 0);
             }
         }
     }
@@ -74,15 +77,4 @@
     background: var(--color-link);
     color: var(--bgrd-link);
     }
-}
-
-.site-nav a i.fas:before {
-    color:var(--bg-link);
-    margin-right: 0.2em;
-}
-
-.site-nav li:hover > a i.fas:before,
-.site-nav li.selected > a i.fas:before,
-.site-nav a:hover i.fas:before {
-    color: var(--bgrd-link);
 }

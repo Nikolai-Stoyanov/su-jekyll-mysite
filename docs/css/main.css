@@ -45,7 +45,7 @@
     .main-welcome .section-content section {
       flex: 0 0 31%;
       border: 2px solid var(--color-border);
-      border-radius: 10px;
+      border-radius: var(--border-radius-def);
       padding: 0.5em; }
       .main-welcome .section-content section h4 {
         text-align: center;
@@ -94,7 +94,7 @@
     .main-requirements .section-content section {
       flex: 0 0 23%;
       border: 2px solid var(--color-link);
-      border-radius: 10px;
+      border-radius: var(--border-radius-def);
       padding: 0.5em; }
       .main-requirements .section-content section h4 {
         text-align: center;
@@ -106,7 +106,7 @@
   display: flex;
   justify-content: space-between;
   border: 2px solid var(--color-link);
-  border-radius: 10px; }
+  border-radius: var(--border-radius-def); }
   .main-camera .picture {
     flex: 0 0 30%;
     padding: 1em; }
@@ -115,7 +115,7 @@
       display: block;
       position: relative;
       background: var(--bgrd-link);
-      border-radius: 40%;
+      border-radius: var(--border-radius-logo);
       overflow: hidden; }
       .main-camera .picture span:before {
         display: block;

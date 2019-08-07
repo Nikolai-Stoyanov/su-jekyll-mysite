@@ -16,7 +16,7 @@
   .contact .section-message {
     grid-column: span 6;
     border: 2px solid var(--color-link);
-    border-radius: 30px;
+    border-radius: var(--border-radius-def);
     padding: 3em; }
   .contact .section-info > p:nth-child(2) {
     text-align: center;
@@ -31,17 +31,18 @@
       outline: none;
       border: none;
       border: 1px solid var(--color-link);
-      border-radius: 15px; }
+      border-radius: var(--border-radius-def); }
     .contact .section-message form p {
       padding-bottom: 0.5em; }
     .contact .section-message form input, .contact .section-message form textarea {
       width: 100%; }
     .contact .section-message form input[type="submit"] {
-      padding: 0; }
+      padding: 0;
+      color: var(--color-border); }
     .contact .section-message form label {
       padding: 0; }
   .contact .section-map iframe {
     border: 2px solid var(--color-border);
-    border-radius: 40%;
+    border-radius: var(--border-radius-logo);
     width: 100%;
     height: 60vh; }

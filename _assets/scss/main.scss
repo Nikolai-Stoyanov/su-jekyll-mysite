@@ -57,7 +57,7 @@
         & section {
             flex: 0 0 31%;
             border: 2px solid var(--color-border);
-            border-radius: 10px;
+            border-radius: var(--border-radius-def);
             padding: 0.5em;
     
             h4 {
@@ -91,13 +91,10 @@
                 }
             }
         }
-    
     }
 }
 
-
 .main-requirements {
-
     background: var(--bgrd-link);
     margin-bottom: 0.5em;
 
@@ -125,7 +122,7 @@
         & section {
             flex: 0 0 23%;
             border: 2px solid var(--color-link);
-            border-radius: 10px;
+            border-radius: var(--border-radius-def);
             padding: 0.5em;
     
             h4 {
@@ -137,7 +134,6 @@
                 padding: 0.5em;
             }
         }
-    
     }
 }
 
@@ -145,19 +141,18 @@
     display: flex;
     justify-content: space-between;
     border: 2px solid var(--color-link);
-    border-radius: 10px;
+    border-radius: var(--border-radius-def);
     
     .picture {
         flex: 0 0 30%;
         padding: 1em;
-        
 
         span {
             width: 100%;
             display: block;
             position: relative;
             background: var(--bgrd-link);
-            border-radius: 40%;
+            border-radius: var(--border-radius-logo);;
             overflow: hidden;
     
             &:before {
@@ -187,5 +182,4 @@
             padding-bottom: 0.5em;
         }
     }
-    
 }

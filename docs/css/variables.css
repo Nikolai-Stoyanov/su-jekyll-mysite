@@ -4,4 +4,6 @@
   --color-body-bgrd: #FFF;
   --color-link: rgb(29, 226, 226);
   --bgrd-link: rgb(238, 238, 238);
-  --color-border: #999; }
+  --color-border: #999;
+  --border-radius-logo: 40%;
+  --border-radius-def: 10px; }

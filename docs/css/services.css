@@ -7,6 +7,7 @@
     padding: 1em 0 0 1em; }
   .services .services-content > section {
     background: var(--color-link);
+    border-radius: var(--border-radius-def);
     margin: 0.3em; }
   .services .services-content .wrapper {
     display: flex; }

@@ -1,15 +1,14 @@
 .section-about {
   text-align: center; }
   .section-about .wrapper {
-    width: 100%;
+    max-width: var(--main-width);
     height: 100vh;
     padding: 1em 6em;
     margin-top: 2em;
-    border-radius: 40%;
-    overflow: hidden;
+    border-radius: var(--border-radius-logo);
     background: var(--bgrd-link);
     color: var(--color-link);
-    transition: all 2s ease-in-out; }
+    transition: background-color 2s ease-in-out, color 2s ease-in-out; }
     .section-about .wrapper:hover {
       transition-delay: 0.4s;
       background: var(--color-link);

@@ -10,12 +10,11 @@
         padding: 1em 0 0 1em;
     }
 
-    
-
     .services-content {
         
         & > section {
             background: var(--color-link);
+            border-radius: var(--border-radius-def);
             margin: 0.3em;
         }
 
@@ -30,7 +29,6 @@
             }
 
             span {
-                
                 display: block;
                 width: 100%;
                 height: auto;
@@ -82,6 +80,4 @@
             }
         }
     }
-
-
 }
