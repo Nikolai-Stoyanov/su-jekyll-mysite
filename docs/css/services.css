@@ -19,7 +19,8 @@
     border-radius: var(--border-radius-def);
     margin: 0.3em; }
   .services .services-wrapper {
-    display: flex; }
+    display: flex;
+    justify-content: center; }
     .services .services-wrapper .services-picture {
       display: block;
       flex: 0 0 25%;
@@ -68,10 +69,8 @@
         padding-bottom: 0; }
 
 @media (max-width: 640px) {
-  .services-container {
+  .services .services-wrapper {
+    display: flex;
     flex-wrap: wrap; }
-    .services-container .services-wrapper {
-      display: block;
-      flex-wrap: wrap; }
-    .services-container .services-content {
-      flex-wrap: wrap; } }
+    .services .services-wrapper .services-picture {
+      flex: 0 0 70%; } }

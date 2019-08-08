@@ -1,25 +1,25 @@
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
 <nav class="site-nav">
-    <span class="nav-responsive"><a href="#" ><i class="fas fa-paw"></i> Menu</a></span>
-    <ul class="nav">
-    {% for item in site.navigation %}
-        <li{% if item.url == page.url %} class="selected"{% endif %}>
-            <a href="{{ site.baseurl }}{{ item.url }}">
-                {% if item.icon %}<i class="fas {{ item.icon }}"></i>{% endif %}
-                <span>{{ item.text }}</span>
-            </a>
-            {% if item.items %}
-            <ul>
-                {% for subitem in item.items %}
-                    <li{% if subitem.url == page.url %} class="selected"{% endif %}>
-                        <a href="{{ site.baseurl }}{{ subitem.url }}">
-                            {{ subitem.text }}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </li>
-    {% endfor %}
-    </ul>
-    
+    <label for="nav-toggle" class="nav-toggle-button"><i class="fas fa-paw"></i> Menu</label>
+        <ul class="nav">
+        {% for item in site.navigation %}
+            <li{% if item.url == page.url %} class="selected"{% endif %}>
+                <a href="{{ site.baseurl }}{{ item.url }}">
+                    {% if item.icon %}<i class="fas {{ item.icon }}"></i>{% endif %}
+                    <span>{{ item.text }}</span>
+                </a>
+                {% if item.items %}
+                <ul>
+                    {% for subitem in item.items %}
+                        <li{% if subitem.url == page.url %} class="selected"{% endif %}>
+                            <a href="{{ site.baseurl }}{{ subitem.url }}">
+                                {{ subitem.text }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
 </nav>

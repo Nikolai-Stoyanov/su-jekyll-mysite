@@ -76,6 +76,6 @@ navigation:
   - url: /login/
     text: LOGIN
     icon: fa-sign-in-alt
-  - url: /register/
-    text: REGISTER
-    icon: fa-registered
+  # - url: /register/
+  #   text: REGISTER
+  #   icon: fa-registered

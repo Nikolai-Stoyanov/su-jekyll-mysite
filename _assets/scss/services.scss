@@ -32,12 +32,12 @@
             background: var(--color-link);
             border-radius: var(--border-radius-def);
             margin: 0.3em;
-        }
-
-        
+        }        
     }
+
     .services-wrapper {
         display: flex;
+        justify-content: center;
 
         .services-picture {
             display: block;
@@ -108,16 +108,15 @@
 }
 
 @media (max-width:640px) {
-    .services-container {
-        flex-wrap: wrap; 
+    .services {
 
         .services-wrapper {
-            display: block;
+            display: flex;
             flex-wrap: wrap;
+    
+            .services-picture {
+                flex: 0 0 70%;
+            }
         }
-
-        .services-content{
-            flex-wrap: wrap; 
-        }
-    }    
+    }
 }

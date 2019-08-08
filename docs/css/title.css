@@ -1,16 +1,47 @@
-@import url("https://fonts.googleapis.com/css?family=Courgette&display=swap");
 .site-title {
-  font-family: 'Courgette', cursive;
-  border: 2px solid var(--color-link);
-  border-radius: 40%;
-  background: var(--bgrd-link); }
-  .site-title a {
-    color: var(--color-link); }
-  .site-title i {
-    font-size: 0.7em; }
-  .site-title span {
-    padding: 0.2em; }
-  .site-title:hover {
-    background: var(--color-link); }
-    .site-title:hover a {
-      color: var(--bgrd-link); }
+  padding: 0;
+  display: flex;
+  width: 6em; }
+  .site-title .logo-normal {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden; }
+    .site-title .logo-normal:before {
+      display: block;
+      content: '';
+      padding-top: 50%; }
+    .site-title .logo-normal img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .site-title .logo-hover {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden; }
+    .site-title .logo-hover:before {
+      display: block;
+      content: '';
+      padding-top: 50%; }
+    .site-title .logo-hover img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .site-title:hover .logo-normal {
+    display: none;
+    opacity: 0;
+    pointer-events: none; }
+  .site-title:hover .logo-hover {
+    display: block;
+    opacity: 1;
+    pointer-events: all; }

@@ -22,7 +22,7 @@
     margin-top: 0.5em; }
   .contact .section-info,
   .contact .section-message {
-    grid-column: span 6;
+    grid-row: span 6;
     border: 2px solid var(--color-link);
     border-radius: var(--border-radius-def);
     padding: 3em; }
@@ -54,3 +54,9 @@
     border-radius: var(--border-radius-logo);
     width: 100%;
     height: 60vh; }
+
+@media (max-width: 640px) {
+  .contact-container .section-info,
+  .contact-container .section-message {
+    justify-content: center;
+    grid-row: span 6; } }
