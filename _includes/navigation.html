@@ -1,6 +1,6 @@
-<nav class="site-nav location-{{ include.location }}">
-
-    <ul>
+<nav class="site-nav">
+    <span class="nav-responsive"><a href="#" ><i class="fas fa-paw"></i> Menu</a></span>
+    <ul class="nav">
     {% for item in site.navigation %}
         <li{% if item.url == page.url %} class="selected"{% endif %}>
             <a href="{{ site.baseurl }}{{ item.url }}">

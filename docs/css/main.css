@@ -37,29 +37,28 @@
       width: 25%;
       margin: 0 auto;
       margin-bottom: 2em; }
-  .main-welcome .section-content {
+  .main-welcome .welcome-section-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 0.5em; }
-    .main-welcome .section-content section {
+    .main-welcome .welcome-section-content section {
       flex: 0 0 31%;
       border: 2px solid var(--color-border);
       border-radius: var(--border-radius-def);
       padding: 0.5em; }
-      .main-welcome .section-content section h4 {
+      .main-welcome .welcome-section-content section h4 {
         text-align: center;
         padding: 2em auto;
         margin: 0;
         margin-top: 2em; }
-      .main-welcome .section-content section p {
+      .main-welcome .welcome-section-content section p {
         padding: 0.5em; }
-      .main-welcome .section-content section span {
+      .main-welcome .welcome-section-content section span {
         display: block;
         position: relative;
         border-radius: 10px;
         overflow: hidden; }
-        .main-welcome .section-content section span:before {
+        .main-welcome .welcome-section-content section span:before {
           display: block;
           content: '';
           position: absolute;
@@ -67,7 +66,7 @@
           left: 0;
           right: 0;
           bottom: 0; }
-        .main-welcome .section-content section span img {
+        .main-welcome .welcome-section-content section span img {
           display: block;
           width: 100%;
           height: auto; }
@@ -86,20 +85,21 @@
       width: 25%;
       margin: 1em auto;
       margin-bottom: 2em; }
-  .main-requirements .section-content {
+  .main-requirements .requirements-section-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 0.5em; }
-    .main-requirements .section-content section {
+    .main-requirements .requirements-section-content > section {
+      display: block;
       flex: 0 0 23%;
       border: 2px solid var(--color-link);
       border-radius: var(--border-radius-def);
-      padding: 0.5em; }
-      .main-requirements .section-content section h4 {
+      padding: 0.5em;
+      margin-bottom: 1em; }
+      .main-requirements .requirements-section-content > section h4 {
         text-align: center;
         padding-bottom: 1em; }
-      .main-requirements .section-content section p {
+      .main-requirements .requirements-section-content > section p {
         padding: 0.5em; }
 
 .main-camera {
@@ -129,10 +129,25 @@
         display: block;
         width: 100%;
         height: auto; }
-  .main-camera .content {
+  .main-camera .main-camera-content {
     padding: 2em 1em; }
-    .main-camera .content h2 {
+    .main-camera .main-camera-content h2 {
       text-align: center; }
-    .main-camera .content p {
+    .main-camera .main-camera-content p {
+      display: block;
       padding: 0;
       padding-bottom: 0.5em; }
+
+@media (max-width: 960px) {
+  .main-requirements .requirements-section-content {
+    flex-wrap: wrap; }
+    .main-requirements .requirements-section-content > section {
+      flex: 0 0 46%; } }
+
+@media (max-width: 640px) {
+  .main-welcome .welcome-section-content {
+    flex-wrap: wrap; }
+    .main-welcome .welcome-section-content section {
+      flex: 0 0 75%; }
+  .main-camera {
+    display: block; } }

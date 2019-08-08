@@ -17,6 +17,19 @@
         grid-column: span 12;
     }
 
+    h2 {
+
+        &::after {
+            display: block;
+            content: '';
+            background: var(--color-border);
+            height: 2px;
+            width: 20%;
+            margin: 0 auto;
+            margin-top: 0.5em;           
+        }
+    }
+
     .section-info,
     .section-message {
         grid-column: span 6;

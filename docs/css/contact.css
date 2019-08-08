@@ -12,6 +12,14 @@
   .contact h2,
   .contact .section-map {
     grid-column: span 12; }
+  .contact h2::after {
+    display: block;
+    content: '';
+    background: var(--color-border);
+    height: 2px;
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 0.5em; }
   .contact .section-info,
   .contact .section-message {
     grid-column: span 6;

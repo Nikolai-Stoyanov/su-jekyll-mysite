@@ -142,6 +142,12 @@ a {
     .site-title:hover a {
       color: var(--bgrd-link); }
 
+.site-nav .nav-responsive {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  font-size: 1.2em; }
+
 .site-nav > ul {
   display: flex;
   padding: 0; }
@@ -205,6 +211,30 @@ a {
   background: var(--color-link);
   color: var(--bgrd-link); }
 
+@media (max-width: 640px) {
+  .site-nav {
+    display: block; }
+    .site-nav .nav-responsive {
+      display: block;
+      text-align: center;
+      opacity: 1;
+      pointer-events: all;
+      position: relative; }
+    .site-nav .nav {
+      display: none; }
+      .site-nav .nav li {
+        padding: 0.5em;
+        display: block; }
+        .site-nav .nav li a {
+          text-align: left;
+          padding: 1em; }
+    .site-nav .nav-responsive + .site-header {
+      display: block; }
+    .site-nav .nav-responsive::-moz-selection + .site-header .nav {
+      display: block; }
+    .site-nav .nav-responsive::selection + .site-header .nav {
+      display: block; } }
+
 .main-picture {
   background: url(https://images.unsplash.com/photo-1494913148647-353ae514b35e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80), rgba(0, 0, 0, 0.9);
   background-position: center;
@@ -244,29 +274,28 @@ a {
       width: 25%;
       margin: 0 auto;
       margin-bottom: 2em; }
-  .main-welcome .section-content {
+  .main-welcome .welcome-section-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 0.5em; }
-    .main-welcome .section-content section {
+    .main-welcome .welcome-section-content section {
       flex: 0 0 31%;
       border: 2px solid var(--color-border);
       border-radius: var(--border-radius-def);
       padding: 0.5em; }
-      .main-welcome .section-content section h4 {
+      .main-welcome .welcome-section-content section h4 {
         text-align: center;
         padding: 2em auto;
         margin: 0;
         margin-top: 2em; }
-      .main-welcome .section-content section p {
+      .main-welcome .welcome-section-content section p {
         padding: 0.5em; }
-      .main-welcome .section-content section span {
+      .main-welcome .welcome-section-content section span {
         display: block;
         position: relative;
         border-radius: 10px;
         overflow: hidden; }
-        .main-welcome .section-content section span:before {
+        .main-welcome .welcome-section-content section span:before {
           display: block;
           content: '';
           position: absolute;
@@ -274,7 +303,7 @@ a {
           left: 0;
           right: 0;
           bottom: 0; }
-        .main-welcome .section-content section span img {
+        .main-welcome .welcome-section-content section span img {
           display: block;
           width: 100%;
           height: auto; }
@@ -293,20 +322,21 @@ a {
       width: 25%;
       margin: 1em auto;
       margin-bottom: 2em; }
-  .main-requirements .section-content {
+  .main-requirements .requirements-section-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 0.5em; }
-    .main-requirements .section-content section {
+    .main-requirements .requirements-section-content > section {
+      display: block;
       flex: 0 0 23%;
       border: 2px solid var(--color-link);
       border-radius: var(--border-radius-def);
-      padding: 0.5em; }
-      .main-requirements .section-content section h4 {
+      padding: 0.5em;
+      margin-bottom: 1em; }
+      .main-requirements .requirements-section-content > section h4 {
         text-align: center;
         padding-bottom: 1em; }
-      .main-requirements .section-content section p {
+      .main-requirements .requirements-section-content > section p {
         padding: 0.5em; }
 
 .main-camera {
@@ -336,13 +366,28 @@ a {
         display: block;
         width: 100%;
         height: auto; }
-  .main-camera .content {
+  .main-camera .main-camera-content {
     padding: 2em 1em; }
-    .main-camera .content h2 {
+    .main-camera .main-camera-content h2 {
       text-align: center; }
-    .main-camera .content p {
+    .main-camera .main-camera-content p {
+      display: block;
       padding: 0;
       padding-bottom: 0.5em; }
+
+@media (max-width: 960px) {
+  .main-requirements .requirements-section-content {
+    flex-wrap: wrap; }
+    .main-requirements .requirements-section-content > section {
+      flex: 0 0 46%; } }
+
+@media (max-width: 640px) {
+  .main-welcome .welcome-section-content {
+    flex-wrap: wrap; }
+    .main-welcome .welcome-section-content section {
+      flex: 0 0 75%; }
+  .main-camera {
+    display: block; } }
 
 form {
   max-width: 30rem;
@@ -434,6 +479,14 @@ form {
   .contact h2,
   .contact .section-map {
     grid-column: span 12; }
+  .contact h2::after {
+    display: block;
+    content: '';
+    background: var(--color-border);
+    height: 2px;
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 0.5em; }
   .contact .section-info,
   .contact .section-message {
     grid-column: span 6;
@@ -494,32 +547,42 @@ form {
   margin-top: 1em; }
   .services h2, .services h6 {
     text-align: center; }
+  .services h2::after {
+    display: block;
+    content: '';
+    background: var(--color-border);
+    height: 2px;
+    width: 15%;
+    margin: 0.5em auto; }
   .services h4 {
     padding: 1em 0 0 1em; }
-  .services .services-content > section {
+  .services li {
+    list-style-type: circle; }
+  .services .services-container > section {
     background: var(--color-link);
     border-radius: var(--border-radius-def);
     margin: 0.3em; }
-  .services .services-content .wrapper {
+  .services .services-wrapper {
     display: flex; }
-    .services .services-content .wrapper .picture {
+    .services .services-wrapper .services-picture {
       display: block;
       flex: 0 0 25%;
       padding: 0.5em;
       margin-bottom: 1em; }
-    .services .services-content .wrapper span {
+    .services .services-wrapper span {
       display: block;
       width: 100%;
       height: auto;
       margin: 0 auto;
       margin-top: 1em;
       position: relative;
-      overflow: hidden; }
-      .services .services-content .wrapper span:before {
+      overflow: hidden;
+      border-radius: var(--border-radius-def); }
+      .services .services-wrapper span:before {
         display: block;
         content: '';
         padding-top: 100%; }
-      .services .services-content .wrapper span img {
+      .services .services-wrapper span img {
         display: block;
         width: 100%;
         height: auto;
@@ -527,21 +590,35 @@ form {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
-      .services .services-content .wrapper span .landscape {
+      .services .services-wrapper span .landscape {
         width: auto;
         height: 100%; }
-    .services .services-content .wrapper .content {
+    .services .services-wrapper .services-content {
       display: flex;
-      padding: 1em; }
-      .services .services-content .wrapper .content section:nth-child(1) {
+      padding: 1em;
+      flex: 0 0 75%;
+      justify-content: space-around; }
+      .services .services-wrapper .services-content section:nth-child(1) {
         padding-right: 1em; }
-    .services .services-content .wrapper .small {
-      display: flex;
+    .services .services-wrapper .small {
+      display: block;
       flex: 0 0 75%;
       justify-content: center;
       align-items: center; }
-      .services .services-content .wrapper .small h6 {
+      .services .services-wrapper .small h6 {
         padding-bottom: 1em; }
+      .services .services-wrapper .small p {
+        padding-top: 1em;
+        padding-bottom: 0; }
+
+@media (max-width: 640px) {
+  .services-container {
+    flex-wrap: wrap; }
+    .services-container .services-wrapper {
+      display: block;
+      flex-wrap: wrap; }
+    .services-container .services-content {
+      flex-wrap: wrap; } }
 
 .gallery {
   padding: 0 1em;

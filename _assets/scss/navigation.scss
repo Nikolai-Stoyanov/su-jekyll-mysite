@@ -1,5 +1,13 @@
 .site-nav {
 
+    .nav-responsive {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        font-size: 1.2em;
+    }
+
+    
     & > ul {
         display: flex;
         padding: 0;
@@ -78,3 +86,40 @@
     color: var(--bgrd-link);
     }
 }
+
+@media (max-width:640px) {
+    .site-nav {
+        display: block;
+
+        .nav-responsive {
+            display: block;
+            text-align: center;
+            opacity: 1;
+            pointer-events: all;
+            position: relative;
+        }
+
+        .nav {
+            display: none;
+            
+            li {
+                padding: 0.5em;
+                display: block;
+
+                a {
+                    text-align: left;
+                    padding: 1em;
+                }
+            }
+        }
+
+        .nav-responsive + .site-header {
+            display: block;
+        }
+
+        .nav-responsive::selection + .site-header .nav {
+            display: block;
+        }
+    }
+}
+
