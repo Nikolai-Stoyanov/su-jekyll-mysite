@@ -86,8 +86,7 @@
   .nav-toggle-button {
     display: block; }
   .site-nav {
-    text-align: center;
-    margin-right: 25%; }
+    text-align: center; }
     .site-nav .nav {
       display: none; }
   .nav-toggle:checked + .site-nav .nav {
