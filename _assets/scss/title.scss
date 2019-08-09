@@ -2,12 +2,14 @@
     padding: 0;
     display: flex;
     width: 6em;
+    height: auto;
 
     .logo-normal {
         width: 100%;
         height: auto;
         position: relative;
         overflow: hidden;
+        opacity: 1;
 
         &:before {
             display: block;
@@ -22,44 +24,9 @@
             left: 50%;
             transform: translate(-50%,-50%);
         }
-    }
 
-    .logo-hover {
-        display: none;
-        opacity: 0;
-        pointer-events: none;
-        width: 100%;
-        height: auto;
-        position: relative;
-        overflow: hidden;
-
-        &:before {
-            display: block;
-            content: '';
-            padding-top: 50%; 
-        }
-        img {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
+        &:hover {
+            opacity: 0.6;
         }
     }
-
-    &:hover {
-        
-        .logo-normal {
-            display: none;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .logo-hover {
-            display: block;
-            opacity: 1;
-            pointer-events: all;
-        }
-   }
 }

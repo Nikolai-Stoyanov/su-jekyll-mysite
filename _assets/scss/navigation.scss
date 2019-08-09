@@ -84,8 +84,6 @@
     opacity: 0;
     pointer-events: none;
     position: absolute;
-
-    
 }
 
 .nav-toggle-button {
@@ -121,7 +119,8 @@
 
     .site-nav {
         text-align: center;
-
+        margin-right: 25%;
+ 
         .nav {
             display: none;
         }
@@ -131,20 +130,25 @@
         display: block;
         position: absolute;
         background: var(--bgrd-link);
-        opacity: 0.9;
+        opacity: 0.95;
         font-size: 1.5em;
+        text-align: left;
+
+        li {
+            padding-top: 0.2em;
+
+            &:hover {
+                position: relative;
+                ul {
+                    position: relative;
+                }
+            }
+        }
 
         ul {
-            position: absolute;
-            top:0;
-            transform: translateX(-100%);
-            width: 120%;
-            padding-right: 1em;
-
-            li {
-                display: block;
-                width: 120%;
-            }
+            text-align: center;
+            font-size: 0.8em;
+            text-align: right;
         }
     }
 }
