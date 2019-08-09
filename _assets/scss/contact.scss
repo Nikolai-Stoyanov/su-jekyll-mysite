@@ -1,20 +1,16 @@
 .contact {
     padding: 0;
     margin: 0.5em auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1em;
-    grid-auto-flow: dense;
     color: var(--color-border);
 
+    .contact-container {
+        display:flex;
+        justify-content: space-around;
+    }
     h2, h3 {
         text-align: center;
         padding-top: 1em;
-    }
-    
-    h2,
-    .section-map {
-        grid-column: span 12;
+        margin-bottom: 1em;
     }
 
     h2 {
@@ -32,13 +28,14 @@
 
     .section-info,
     .section-message {
-        grid-row: span 6;
         border: 2px solid var(--color-link);
         border-radius: var(--border-radius-def);
         padding: 3em;
     }
 
     .section-info {
+        flex: 0 0 45%;
+        margin-bottom: 1em;
 
         & > p:nth-child(2){
             text-align: center;
@@ -50,11 +47,12 @@
         }
     }
 
+    
     .section-message {
+        flex: 0 0 45%;
+        margin-bottom: 1em;
 
         form {
-            display: grid;
-            grid-column: span 6;
             margin: 1em 2em;
 
             input, output, textarea, select {
@@ -91,12 +89,16 @@
     }
 }
 
-@media (max-width:640px) {
-    .contact-container {
+@media (max-width:960px) {
+    .contact {
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .section-info,
         .section-message {
-            justify-content: center;
-            grid-row: span 6;
+            flex: 0 0 60%;
         }
     }
 }
