@@ -81,30 +81,47 @@
         }        
     }
 
-    .section-map iframe {
-        border: 2px solid var(--color-border);
-        width: 100%;
-        height:60vh;
-        overflow: hidden;
+    .section-map {
+        .map-container {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+
+            iframe {
+                flex: 0 0 95%;
+                border: 2px solid var(--color-border);
+                border-radius: var(--border-radius-def);
+            }
+        }
     }
 }
 
 @media (max-width:960px) {
     .contact {
         .section-message {
+
             form {
-                margin: 0;
+                margin: 0;                
             }
         }
         
         .contact-container {
-            display: flex;
             flex-wrap: wrap;
         }
 
         .section-info,
         .section-message {
             flex: 0 0 60%;
+            min-width: 16em;
+        }
+
+        .section-map {
+            .map-container {
+                iframe {
+                flex: 0 0 60%;
+                min-width: 16em;
+                }
+            }
         }
     }
 }

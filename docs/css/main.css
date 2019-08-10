@@ -153,9 +153,13 @@
       padding: 1em; } }
 
 @media (max-width: 640px) {
+  .main-welcome header p {
+    padding: 1em; }
   .main-welcome .welcome-section-content {
     flex-wrap: wrap; }
     .main-welcome .welcome-section-content section {
       flex: 0 0 75%; }
+  .main-requirements .requirements-section-content > section {
+    min-width: 10em; }
   .main-camera .picture {
     flex: 0 0 70%; } }

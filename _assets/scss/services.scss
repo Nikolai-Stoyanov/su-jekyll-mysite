@@ -27,6 +27,7 @@
     }
 
     .services-container {
+        padding-bottom: 0.3em;
         
         & > section {
             background: var(--color-link);
@@ -116,6 +117,10 @@
     
             .services-picture {
                 flex: 0 0 70%;
+            }
+
+            .services-content {
+                flex-wrap: wrap;
             }
         }
     }

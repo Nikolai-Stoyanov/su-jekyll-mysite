@@ -414,10 +414,14 @@ a {
       padding: 1em; } }
 
 @media (max-width: 640px) {
+  .main-welcome header p {
+    padding: 1em; }
   .main-welcome .welcome-section-content {
     flex-wrap: wrap; }
     .main-welcome .welcome-section-content section {
       flex: 0 0 75%; }
+  .main-requirements .requirements-section-content > section {
+    min-width: 10em; }
   .main-camera .picture {
     flex: 0 0 70%; } }
 
@@ -548,21 +552,27 @@ form {
         color: var(--color-border); }
       .contact .section-message form label {
         padding: 0; }
-  .contact .section-map iframe {
-    border: 2px solid var(--color-border);
-    width: 100%;
-    height: 60vh;
+  .contact .section-map .map-container {
+    display: flex;
+    justify-content: center;
     overflow: hidden; }
+    .contact .section-map .map-container iframe {
+      flex: 0 0 95%;
+      border: 2px solid var(--color-border);
+      border-radius: var(--border-radius-def); }
 
 @media (max-width: 960px) {
   .contact .section-message form {
     margin: 0; }
   .contact .contact-container {
-    display: flex;
     flex-wrap: wrap; }
   .contact .section-info,
   .contact .section-message {
-    flex: 0 0 60%; } }
+    flex: 0 0 60%;
+    min-width: 16em; }
+  .contact .section-map .map-container iframe {
+    flex: 0 0 60%;
+    min-width: 16em; } }
 
 .section-about {
   text-align: center; }
@@ -600,10 +610,12 @@ form {
     padding: 1em 0 0 1em; }
   .services li {
     list-style-type: circle; }
-  .services .services-container > section {
-    background: var(--color-link);
-    border-radius: var(--border-radius-def);
-    margin: 0.3em; }
+  .services .services-container {
+    padding-bottom: 0.3em; }
+    .services .services-container > section {
+      background: var(--color-link);
+      border-radius: var(--border-radius-def);
+      margin: 0.3em; }
   .services .services-wrapper {
     display: flex;
     justify-content: center; }
@@ -659,7 +671,9 @@ form {
     display: flex;
     flex-wrap: wrap; }
     .services .services-wrapper .services-picture {
-      flex: 0 0 70%; } }
+      flex: 0 0 70%; }
+    .services .services-wrapper .services-content {
+      flex-wrap: wrap; } }
 
 .gallery {
   padding: 0 1em;
