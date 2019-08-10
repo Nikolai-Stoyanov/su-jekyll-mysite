@@ -270,14 +270,14 @@ a {
   margin: 0.5em auto;
   margin-top: 1em;
   text-align: center; }
-  .main-picture button {
+  .main-picture a {
     padding: 2em auto;
     outline: none;
     border: 1px solid var(--color-border);
     background: var(--color-link);
     color: var(--bgrd-link);
     padding: 0.5em; }
-    .main-picture button:hover {
+    .main-picture a:hover {
       background: var(--bgrd-link);
       color: var(--color-link);
       border-color: var(--color-link);
